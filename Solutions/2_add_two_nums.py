@@ -13,10 +13,14 @@ class LinekedList:
         self.head = node
 
     def insert_in_last(self,data):
+        node = ListNode(data)
+        if self.head is None:
+            self.head = node
+            return
+
         l=self.head
         while l.next:
             l=l.next
-        node = ListNode(data)
         l.next = node
 
     def print_list(self):
@@ -25,20 +29,10 @@ class LinekedList:
             print(l.val)
             l = l.next
 
-    def count_node(self):
-        counter = 0
-        l=self.head
-        while l:
-            counter +=1
-            l=l.next
-
-        return counter
-
 class Solution:
     def addTwoNumbers(self, l1: [ListNode], l2: [ListNode]) -> [ListNode]:
-        l1 = LinekedList()
-        temp1 = node1 = l1.head
-        temp2 = node2 = l2.head
+        temp1 = node1 = list1.head
+        temp2 = node2 = list2.head
         while temp1 or temp2:
             if not temp1.next and temp2.next:
                 l1.insert_in_last(0)
@@ -67,19 +61,18 @@ class Solution:
 
         return result
 
+#
+l1 = [2,4,3]
+l2 = [5,6,4]
 
-lnode1 = LinekedList()
-lnode1.insert_in_begining(3)
-lnode1.insert_in_begining(4)
-# lnode1.insert_in_begining(2)
-lnode1.print_list()
+list1 = LinekedList()
+list2 = LinekedList()
 
-
-lnode2 = LinekedList()
-lnode2.insert_in_begining(4)
-lnode2.insert_in_begining(6)
-lnode2.insert_in_begining(5)
+for i in l1:
+    list1.insert_in_last(i)
+for j in l2:
+    list2.insert_in_last(j)
 
 res = Solution()
-result = res.addTwoNumbers(lnode1,lnode2)
+result = res.addTwoNumbers(list1,list2)
 result.print_list()
