@@ -12,6 +12,13 @@ class LinekedList:
         node = ListNode(data, self.head)
         self.head = node
 
+    def insert_in_last(self,data):
+        l=self.head
+        while l.next:
+            l=l.next
+        node = ListNode(data)
+        l.next = node
+
     def print_list(self):
         l = self.head
         while l:
@@ -29,17 +36,23 @@ class LinekedList:
 
 class Solution:
     def addTwoNumbers(self, l1: [ListNode], l2: [ListNode]) -> [ListNode]:
-        l1_len = LinekedList.count_node(l1)
-        l2_len = LinekedList.count_node(l2)
+        l1 = LinekedList()
+        temp1 = node1 = l1.head
+        temp2 = node2 = l2.head
+        while temp1 or temp2:
+            if not temp1.next and temp2.next:
+                l1.insert_in_last(0)
+            elif temp1.next and not temp2.next:
+                l2.insert_in_last(0)
+            else:
+                temp1 = temp1.next
+                temp2 = temp2.next
 
-        loop_range =  l1_len if l1_len>l2_len else l2_len
-        node1 = l1.head
-        node2 = l2.head
         carry=0
         result = LinekedList()
-        for i in range(loop_range):
-            val1 = node1.val if node1.val else 0
-            val2 = node2.val if node2.val else 0
+        while node1:
+            val1 = node1.val
+            val2 = node2.val
 
             sum=val2 + val1 + carry
             if sum>9:
@@ -48,8 +61,8 @@ class Solution:
 
             result.insert_in_begining(sum)
 
-            node1 = node1.next if node1.next else None
-            node2 = node2.next if node2.next else None
+            node1 = node1.next
+            node2 = node2.next
 
 
         return result
@@ -58,9 +71,8 @@ class Solution:
 lnode1 = LinekedList()
 lnode1.insert_in_begining(3)
 lnode1.insert_in_begining(4)
-lnode1.insert_in_begining(2)
-
-# lnode1.print_list()
+# lnode1.insert_in_begining(2)
+lnode1.print_list()
 
 
 lnode2 = LinekedList()
