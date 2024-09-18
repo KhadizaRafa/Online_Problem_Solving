@@ -5,18 +5,22 @@ class Solution:
             '{':'}',
             '[':']'
         }
-        q = []
+        q= []
+
+        if len(s)<2:
+            return False
         for i in s:
             if i in p.keys():
                 q.append(i)
             else:
-                m = q.pop()
-                if i != p.get(m):
+                if len(q) and i == p.get(q.pop()):
+                    continue
+                else:
                     return False
         return False if len(q) else True
 
 
-strs = "["
+strs = "]]"
 arr=Solution()
 print(arr.isValid(strs))
 
