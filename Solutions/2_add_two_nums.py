@@ -17,7 +17,7 @@ class LinekedList:
         while l.next:
             l=l.next
         node = ListNode(data)
-        l.next = node
+        self.next = node
 
     def print_list(self):
         l = self.head
@@ -36,7 +36,7 @@ class LinekedList:
 
 class Solution:
     def addTwoNumbers(self, l1: [ListNode], l2: [ListNode]) -> [ListNode]:
-        l1 = LinekedList()
+
         temp1 = node1 = l1.head
         temp2 = node2 = l2.head
         while temp1 or temp2:
@@ -47,6 +47,16 @@ class Solution:
             else:
                 temp1 = temp1.next
                 temp2 = temp2.next
+
+        # l1_len = LinekedList.count_node(l1)
+        # l2_len = LinekedList.count_node(l2)
+        #
+        # loop_range = l1_len if l1_len>l2_len else l2_len
+        # least_node_list = l1_len if l1_len<l2_len else l2_len
+        #
+        # # for i in range(least_node_list,loop_range):
+        # #     LinekedList.insert_in_last(0)
+
 
         carry=0
         result = LinekedList()
