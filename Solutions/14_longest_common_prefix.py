@@ -3,9 +3,9 @@ class Solution:
 
         shortest_str = strs[0]
 
-        for str in strs:
-            if len(str) < len(shortest_str):
-                shortest_str = str
+        # for str in strs:
+        #     if len(str) < len(shortest_str):
+        #         shortest_str = str
 
         for str in strs:
             while not str.startswith(shortest_str):
