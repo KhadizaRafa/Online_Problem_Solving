@@ -6,8 +6,8 @@ class Solution(object):
         """
         low = 1
         high = x
-        res=low * low
-        while res<=x:
+        # mid=(low + high) // 2
+        while low<high:
             mid = (low+high) // 2
             res = mid * mid
             if res > x:
@@ -18,6 +18,6 @@ class Solution(object):
                 return mid
         return high
 
-num = 0
+num = 8
 res = Solution()
 print(res.mySqrt(num))
