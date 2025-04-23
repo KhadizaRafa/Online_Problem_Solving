@@ -1,5 +1,8 @@
 # https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/P
+# Mem 200 KB
+# Solution 1 took 62 ms	, Solution 2 took 77 ms
 
+######## Solution 1 ########
 def minimize_nums(n,nums):
     result_set = []
     for i in range(n):
@@ -20,8 +23,7 @@ print(minimize_nums(n,nums))
 
 
 
-
-# https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/P
+######## Solution 2 ########
 
 def minimize_nums(n,nums):
     counter = 1
