@@ -1,13 +1,12 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="14_longest_common_prefix" type="PythonConfigurationType" factoryName="Python" singleton="false" nameIsGenerated="true">
-    <module name="LeetCode_Solutions" />
+    <module name="Online_Problem_Solving" />
     <option name="INTERPRETER_OPTIONS" value="" />
     <option name="PARENT_ENVS" value="true" />
     <envs>
       <env name="PYTHONUNBUFFERED" value="1" />
     </envs>
     <option name="SDK_HOME" value="C:\Users\asus\AppData\Local\Programs\Python\Python311\python.exe" />
-    <option name="SDK_NAME" value="Python 3.11 (Halnagad_folders)" />
     <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Solutions" />
     <option name="IS_MODULE_SDK" value="false" />
     <option name="ADD_CONTENT_ROOTS" value="true" />
