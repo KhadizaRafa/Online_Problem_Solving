@@ -11,11 +11,25 @@ class Solution(object):
     #     else:
     #         return 0
 
-    def maxProfit(self, prices):
-        p = [[index,value] for index, value in enumerate(prices)]
 
-        print(sorted_p)
-        return p
+    # [7, 1, 5, 3, 6, 4]
+    def maxProfit(self, prices):
+        buy_price = sell_price = 0
+        i = 0
+        j = len(prices)
+        while(i!=len(prices)):
+            profit = prices[j] - prices[i]
+            if profit>0:
+                if prices[i] < buy_price:
+                    buy_price = prices[i]
+                if prices[j] > sell_price:
+                    sell_price = prices[j]
+            j = j-1
+            if i == j:
+                i = i + 1
+                j = len(prices) - i
+
+        return profit
         # min_price = prices[0]
         # min_day = 0
         # p = prices
@@ -43,4 +57,4 @@ class Solution(object):
         #     return 0
 
 res = Solution()
-print(res.maxProfit([2,4,1]))
+print(res.maxProfit([7,1,5,3,6,4]))
