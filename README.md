@@ -2,6 +2,7 @@
 Solved problems from different platforms. Provided the list of problems that I have worked on so far
 
 **LeetCode:**
+121. https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/?envType=study-plan-v2&envId=top-interview-150
 
 **CodeForces:**
 1. https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/P
