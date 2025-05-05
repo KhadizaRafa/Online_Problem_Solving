@@ -2,6 +2,7 @@
 Solved problems from different platforms. Provided the list of problems that I have worked on so far
 
 **LeetCode:**
+1. https://leetcode.com/problems/two-sum/
 121. https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/?envType=study-plan-v2&envId=top-interview-150
 
 **CodeForces:**
